@@ -10,7 +10,9 @@ const Pokemon = (props) => {
   const onHeartClick = () => {
     updateFavoritePokemons(pokemon.name);
   };
-  const heart = favoritePokemons.includes(pokemon.name) ? "💖" : "🖤";
+  const redHeart = "💖";
+  const blackHeart = "🖤";
+  const heart = favoritePokemons.includes(pokemon.name) ? redHeart : blackHeart;
 
   return (
     <>
