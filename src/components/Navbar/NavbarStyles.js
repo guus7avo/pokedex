@@ -1,36 +1,6 @@
-import React, { useContext } from "react";
-import FavoriteContext from "../contexts/favoriteContext";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const Navbar = () => {
-  const { favoritePokemons } = useContext(FavoriteContext);
-  const logoImg =
-    "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png";
-
-  return (
-    <Nav>
-      <NavLink exact="true" to="/home">
-        <Logo>
-          <img src={logoImg} alt="PokeApi-logo" />
-        </Logo>
-      </NavLink>
-      <NavMenu>
-        <NavLink exact="true" to="/home" className="hidden">
-          <img src="/images/home-icon.svg" alt="HOME" />
-          <span>HOME</span>
-        </NavLink>
-        <NavLink exact="true" to="/favorite" className="favorite">
-          <div>
-            <span>❤️{favoritePokemons.length} FAVORITE</span>
-          </div>
-        </NavLink>
-      </NavMenu>
-    </Nav>
-  );
-};
-
-const Nav = styled.nav`
+export const Nav = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
@@ -44,7 +14,7 @@ const Nav = styled.nav`
   letter-spacing: 16px;
   z-index: 3;
 `;
-const Logo = styled.div`
+export const Logo = styled.div`
   padding: 0;
   width: 80px;
   margin-top: 4px;
@@ -56,10 +26,10 @@ const Logo = styled.div`
     width: 100%;
   }
 `;
-const UserImg = styled.img`
+export const UserImg = styled.img`
   height: 100%;
 `;
-const NavMenu = styled.div`
+export const NavMenu = styled.div`
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
@@ -131,7 +101,7 @@ const NavMenu = styled.div`
   }
 `;
 
-const DropDown = styled.div`
+export const DropDown = styled.div`
   position: absolute;
   top: 48px;
   right: 0px;
@@ -146,7 +116,7 @@ const DropDown = styled.div`
   opacity: 0;
 `;
 
-const SignOut = styled.div`
+export const SignOut = styled.div`
   position: relative;
   height: 48px;
   width: 48px;
@@ -162,5 +132,3 @@ const SignOut = styled.div`
     }
   }
 `;
-
-export default Navbar;

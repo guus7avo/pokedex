@@ -1,11 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
 import styled from "styled-components";
 import { getPokemonData, getPokemons, searchPokemon } from "../api";
-import Pagination from "../components/Pagination";
-import Pokemon from "../components/Pokemon";
+import Pagination from "../components/Pagination/Pagination";
+import Pokemon from "../components/Pokemon/Pokemon";
 import FavoriteContext from "../contexts/favoriteContext";
 import Sad from "../assets/pikachu.png";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 
 function Favorite() {
   const [page, setPage] = useState(0);

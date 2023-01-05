@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-import Pokedex from "../components/Pokedex";
-import Searchbar from "../components/Searchbar";
+import Navbar from "../components/Navbar/Navbar";
+import Pokedex from "../components/Pokedex/Pokedex";
+import Searchbar from "../components/Searchbar/Searchbar";
 import { getPokemonData, getPokemons, searchPokemon } from "../api";
 import logo from "../assets/tired.gif";
 import styled from "styled-components";

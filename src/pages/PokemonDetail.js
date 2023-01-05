@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import PokemonDetailed from "../components/PokemonDetailed";
+import PokemonDetailed from "../components/PokemonDetailed/PokemonDetailed";
 
 function PokemonDetail() {
   const [pokemons, setPokemons] = useState({});
