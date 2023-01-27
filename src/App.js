@@ -40,7 +40,7 @@ function App() {
       }}
     >
       <div className="App">
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/favorite" element={<Favorite />} />
             <Route path="/" element={<Home />} exact />
